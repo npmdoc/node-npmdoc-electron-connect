@@ -1,0 +1,659 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/Quramy/electron-connect"
+
+    >electron-connect (v0.6.1)</a>
+</h1>
+<h4>Livereload tools for Electron development</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-connect">module electron-connect</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-connect.socketWrapper">
+            function <span class="apidocSignatureSpan">electron-connect.</span>socketWrapper
+            <span class="apidocSignatureSpan">(ws)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-connect.</span>client</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-connect.</span>server</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-connect.</span>socketWrapper.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-connect.</span>util</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-connect.client">module electron-connect.client</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-connect.client.create">
+            function <span class="apidocSignatureSpan">electron-connect.client.</span>create
+            <span class="apidocSignatureSpan">(browserWindow, options, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-connect.server">module electron-connect.server</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-connect.server.create">
+            function <span class="apidocSignatureSpan">electron-connect.server.</span>create
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-connect.socketWrapper">module electron-connect.socketWrapper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-connect.socketWrapper.socketWrapper">
+            function <span class="apidocSignatureSpan">electron-connect.</span>socketWrapper
+            <span class="apidocSignatureSpan">(ws)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-connect.socketWrapper.add">
+            function <span class="apidocSignatureSpan">electron-connect.socketWrapper.</span>add
+            <span class="apidocSignatureSpan">(wrapper)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-connect.socketWrapper.broadcast">
+            function <span class="apidocSignatureSpan">electron-connect.socketWrapper.</span>broadcast
+            <span class="apidocSignatureSpan">(type, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-connect.socketWrapper.delete">
+            function <span class="apidocSignatureSpan">electron-connect.socketWrapper.</span>delete
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-connect.socketWrapper.get">
+            function <span class="apidocSignatureSpan">electron-connect.socketWrapper.</span>get
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-connect.socketWrapper.prototype">module electron-connect.socketWrapper.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-connect.socketWrapper.prototype.clearAll">
+            function <span class="apidocSignatureSpan">electron-connect.socketWrapper.prototype.</span>clearAll
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-connect.socketWrapper.prototype.get">
+            function <span class="apidocSignatureSpan">electron-connect.socketWrapper.prototype.</span>get
+            <span class="apidocSignatureSpan">(key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-connect.socketWrapper.prototype.on">
+            function <span class="apidocSignatureSpan">electron-connect.socketWrapper.prototype.</span>on
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-connect.socketWrapper.prototype.set">
+            function <span class="apidocSignatureSpan">electron-connect.socketWrapper.prototype.</span>set
+            <span class="apidocSignatureSpan">(key, value)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-connect.util">module electron-connect.util</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-connect.util.getIdFromUrl">
+            function <span class="apidocSignatureSpan">electron-connect.util.</span>getIdFromUrl
+            <span class="apidocSignatureSpan">(url)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-connect.util.sendMessage">
+            function <span class="apidocSignatureSpan">electron-connect.util.</span>sendMessage
+            <span class="apidocSignatureSpan">(socket, type, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">electron-connect.util.</span>LOG_LEVEL_INFO</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">electron-connect.util.</span>LOG_LEVEL_VERBOSE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">electron-connect.util.</span>LOG_LEVEL_WARNING</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-connect" id="apidoc.module.electron-connect">module electron-connect</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-connect.socketWrapper" id="apidoc.element.electron-connect.socketWrapper">
+        function <span class="apidocSignatureSpan">electron-connect.</span>socketWrapper
+        <span class="apidocSignatureSpan">(ws)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">socketWrapper = function (ws) {
+  this._socket = ws;
+  if(ws &#x26;&#x26; ws.upgradeReq) {
+    this.id = util.getIdFromUrl(ws.upgradeReq.url);
+  }
+  this.sendMessage = createReply(ws);
+  if(!registry[this.id]) {
+    registry[this.id] = {};
+  }
+  SocketWrapper.add(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-connect.client" id="apidoc.module.electron-connect.client">module electron-connect.client</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-connect.client.create" id="apidoc.element.electron-connect.client.create">
+        function <span class="apidocSignatureSpan">electron-connect.client.</span>create
+        <span class="apidocSignatureSpan">(browserWindow, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (browserWindow, options, cb) {
+  return new Client().join(browserWindow, options, cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Server
+Here is an example creating a server in [gulpfile](http://gulpjs.com/).
+
+```js
+&#x27;use strict&#x27;;
+
+var gulp = require(&#x27;gulp&#x27;);
+var electron = require(&#x27;electron-connect&#x27;).server.<span class="apidocCodeKeywordSpan">create</span>();
+
+gulp.task(&#x27;serve&#x27;, function () {
+
+// Start browser process
+electron.start();
+
+// Restart browser process
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-connect.server" id="apidoc.module.electron-connect.server">module electron-connect.server</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-connect.server.create" id="apidoc.element.electron-connect.server.create">
+        function <span class="apidocSignatureSpan">electron-connect.server.</span>create
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (options) {
+  var electron;
+  if(options &#x26;&#x26; options.useGlobalElectron) {
+    electron = &#x27;electron&#x27;;
+  } else {
+    try {
+      electron = require(&#x27;electron&#x27;);
+    } catch (e) {
+      if(e.code === &#x27;MODULE_NOT_FOUND&#x27;) {
+        electron = &#x27;electron&#x27;;
+      }
+    }
+  }
+  var opt = _.merge({
+    stopOnClose: false,
+    electron: electron,
+    path: process.cwd(),
+    port: 30080,
+    logLevel: util.LOG_LEVEL_INFO,
+    spawnOpt: {stdio: &#x27;inherit&#x27;}
+  }, options || {});
+  return new ProcessManager().init(opt);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Server
+Here is an example creating a server in [gulpfile](http://gulpjs.com/).
+
+```js
+&#x27;use strict&#x27;;
+
+var gulp = require(&#x27;gulp&#x27;);
+var electron = require(&#x27;electron-connect&#x27;).server.<span class="apidocCodeKeywordSpan">create</span>();
+
+gulp.task(&#x27;serve&#x27;, function () {
+
+// Start browser process
+electron.start();
+
+// Restart browser process
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-connect.socketWrapper" id="apidoc.module.electron-connect.socketWrapper">module electron-connect.socketWrapper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-connect.socketWrapper.socketWrapper" id="apidoc.element.electron-connect.socketWrapper.socketWrapper">
+        function <span class="apidocSignatureSpan">electron-connect.</span>socketWrapper
+        <span class="apidocSignatureSpan">(ws)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">socketWrapper = function (ws) {
+  this._socket = ws;
+  if(ws &#x26;&#x26; ws.upgradeReq) {
+    this.id = util.getIdFromUrl(ws.upgradeReq.url);
+  }
+  this.sendMessage = createReply(ws);
+  if(!registry[this.id]) {
+    registry[this.id] = {};
+  }
+  SocketWrapper.add(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-connect.socketWrapper.add" id="apidoc.element.electron-connect.socketWrapper.add">
+        function <span class="apidocSignatureSpan">electron-connect.socketWrapper.</span>add
+        <span class="apidocSignatureSpan">(wrapper)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (wrapper) {
+  repo[wrapper.id] = wrapper;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if(ws &#x26;&#x26; ws.upgradeReq) {
+    this.id = util.getIdFromUrl(ws.upgradeReq.url);
+  }
+  this.sendMessage = createReply(ws);
+  if(!registry[this.id]) {
+    registry[this.id] = {};
+  }
+  SocketWrapper.<span class="apidocCodeKeywordSpan">add</span>(this);
+};
+
+SocketWrapper.get = function (id) {
+  return repo[id];
+};
+
+SocketWrapper.add = function (wrapper) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-connect.socketWrapper.broadcast" id="apidoc.element.electron-connect.socketWrapper.broadcast">
+        function <span class="apidocSignatureSpan">electron-connect.socketWrapper.</span>broadcast
+        <span class="apidocSignatureSpan">(type, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">broadcast = function (type, data) {
+  for(var id in repo) {
+    repo[id].sendMessage(type, data);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-connect.socketWrapper.delete" id="apidoc.element.electron-connect.socketWrapper.delete">
+        function <span class="apidocSignatureSpan">electron-connect.socketWrapper.</span>delete
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delete = function (id) {
+  delete repo[id];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-connect.socketWrapper.get" id="apidoc.element.electron-connect.socketWrapper.get">
+        function <span class="apidocSignatureSpan">electron-connect.socketWrapper.</span>get
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (id) {
+  return repo[id];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-connect.socketWrapper.prototype" id="apidoc.module.electron-connect.socketWrapper.prototype">module electron-connect.socketWrapper.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-connect.socketWrapper.prototype.clearAll" id="apidoc.element.electron-connect.socketWrapper.prototype.clearAll">
+        function <span class="apidocSignatureSpan">electron-connect.socketWrapper.prototype.</span>clearAll
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clearAll = function () {
+  registry[this.id] = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-connect.socketWrapper.prototype.get" id="apidoc.element.electron-connect.socketWrapper.prototype.get">
+        function <span class="apidocSignatureSpan">electron-connect.socketWrapper.prototype.</span>get
+        <span class="apidocSignatureSpan">(key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (key) {
+  if(registry[this.id]){
+    return registry[this.id][key];
+  }
+  return;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-connect.socketWrapper.prototype.on" id="apidoc.element.electron-connect.socketWrapper.prototype.on">
+        function <span class="apidocSignatureSpan">electron-connect.socketWrapper.prototype.</span>on
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">on = function () {
+  this._socket.on.apply(this._socket, arguments);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+&#x27;use strict&#x27;;
+
+var app = require(&#x27;app&#x27;);
+var BrowserWindow = require(&#x27;browser-window&#x27;);
+var client = require(&#x27;electron-connect&#x27;).client;
+
+app.<span class="apidocCodeKeywordSpan">on</span>(&#x27;ready&#x27;, function () {
+var mainWindow = new BrowserWindow({
+  width: 400,
+  height: 300
+});
+mainWindow.loadUrl(&#x27;file://&#x27; + __dirname + &#x27;/index.html&#x27;);
+
+// Connect to server process
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-connect.socketWrapper.prototype.set" id="apidoc.element.electron-connect.socketWrapper.prototype.set">
+        function <span class="apidocSignatureSpan">electron-connect.socketWrapper.prototype.</span>set
+        <span class="apidocSignatureSpan">(key, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (key, value) {
+  if(registry[this.id]){
+    registry[this.id][key] = value;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-connect.util" id="apidoc.module.electron-connect.util">module electron-connect.util</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-connect.util.getIdFromUrl" id="apidoc.element.electron-connect.util.getIdFromUrl">
+        function <span class="apidocSignatureSpan">electron-connect.util.</span>getIdFromUrl
+        <span class="apidocSignatureSpan">(url)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getIdFromUrl = function (url) {
+  var matched = url.match(/\?window_id=([^&#x26;])/);
+  return matched &#x26;&#x26; matched[1];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+var repo = {};
+var registry = {};
+var SocketWrapper = function (ws) {
+  this._socket = ws;
+  if(ws &#x26;&#x26; ws.upgradeReq) {
+    this.id = util.<span class="apidocCodeKeywordSpan">getIdFromUrl</span>(ws.upgradeReq.url);
+  }
+  this.sendMessage = createReply(ws);
+  if(!registry[this.id]) {
+    registry[this.id] = {};
+  }
+  SocketWrapper.add(this);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-connect.util.sendMessage" id="apidoc.element.electron-connect.util.sendMessage">
+        function <span class="apidocSignatureSpan">electron-connect.util.</span>sendMessage
+        <span class="apidocSignatureSpan">(socket, type, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sendMessage = function (socket, type, data) {
+  if(!type || !socket || socket.readyState !== webSocket.OPEN) return;
+  var obj = {type: type};
+  if(data) obj.data = data;
+  socket.send(JSON.stringify(obj));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+&#x27;use strict&#x27;;
+
+var util = require(&#x27;./util&#x27;);
+
+var createReply = function (ws) {
+return function (type, data) {
+  return util.<span class="apidocCodeKeywordSpan">sendMessage</span>(ws, type, data);
+};
+};
+
+var repo = {};
+var registry = {};
+var SocketWrapper = function (ws) {
+this._socket = ws;
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
